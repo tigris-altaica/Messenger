@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strs) {
             try {
-                socket = new Socket("10.0.2.2", 9779);
+                socket = new Socket("<IP>", 9779);
                 output = socket.getOutputStream();
                 input = socket.getInputStream();
                 reader = new BufferedInputStream(input);
