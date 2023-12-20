@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_yellow"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/sendButton"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8sp"
+        android:text="@string/sendButtonText"
+        android:textColor="@color/white"
+        android:textColorLink="@color/pine_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="onClick"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:imeOptions="actionDone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8sp"
+        android:ems="10"
+        android:hint="@string/editTextHint"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sendButton" />
+
+    <ScrollView
+        android:id="@+id/msgScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginRight="16sp"
+        android:layout_marginBottom="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/msgList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
